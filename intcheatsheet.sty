@@ -1,0 +1,85 @@
+%%%%%%%%%%%%% Luke's "cheatsheet" style
+
+
+\usepackage{multicol} % For more than two column output
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath} % default AMC math environments
+\usepackage{amsfonts} % default AMS math fonts
+\usepackage{amssymb} % default AMS symbols
+\RequirePackage[top=.5in, left=.3in, right=.3in, bottom=.5in, foot=.3in]{geometry} % shrink margins
+%\RequirePackage[margin=.3in]{geometry} % shrink margins
+%\usepackage[normalmargins]{savetrees} % shrinks things a bit
+
+\usepackage{makeidx} % for index
+\makeindex
+
+\usepackage[all]{xy} % for drawing diagrams in math mode.
+
+\usepackage[perpage,symbol*]{footmisc} % for getting symbols on footnotes, instead of numbers.
+
+\usepackage{ifpdf} % allows us to check whether using pdf output
+
+\ifpdf % We are running PDF
+\usepackage[pdftex, pdfpagelabels, pdfpagemode="None", pdfauthor="Luke Stein", hyperfootnotes=false]{hyperref} % turns references to hyperlinks; also tells PDFLatex about paper size
+\usepackage[pdftex]{graphicx} % for graphics support
+\usepackage{epstopdf} % convert eps graphics to pdf on the fly; NB: may require pdfLaTeX to run with --shell-escape flag
+
+\else % We are not running PDF
+\usepackage[hyperfootnotes=false]{hyperref} % turns references to hyperlinks
+\usepackage{graphicx} % for graphics support
+\fi
+
+%\graphicspath{{figures/}}
+
+% Shortcuts for "blackboard-style" symbols for reals
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+
+% Preferred emptyset symbol
+\renewcommand{\emptyset}{\varnothing}
+
+% Preferred epsilon symbol
+\renewcommand{\epsilon}{\varepsilon}
+
+% Shortcuts for non-italicized operators: expected value (E), variance (Var), normal (n), gamma (gamma), uniform (Unif), rank (rank), Cov (Cov)
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\n}{N}
+\DeclareMathOperator{\gammanoital}{gamma}
+\DeclareMathOperator{\unifnoital}{Unif}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Avar}{Avar}
+\DeclareMathOperator*{\plim}{plim}
+
+% Define \independent as the statistical independence symbol
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+\newcommand{\independentm}{\ensuremath{\independent\!\!_{\text{m}}}}
+
+% New math operators: argmax and argmin
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+
+% \pref as a shortcut for preference (and ensure math mode)
+\newcommand{\pref}{\ensuremath{\succsim}}
+
+% Sometimes forget to use \nabla for gradient
+\newcommand{\grad}{\ensuremath{\nabla}}
+
+% Table of contents customizatoin
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftsubsecindent}{0em}
+\setlength{\cftbeforesubsecskip}{0.5em}
+\setlength{\cftsubsubsecindent}{2.3em}
+\setlength{\cftsubsubsecnumwidth}{1.0em}
+
+% Define abs and norm per AMS recommendations
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+% Item list to get section headers and add things to TOC
+\newcommand{\litem}[2]{\item[#1]\addcontentsline{toc}{subsubsection}{#1}\index{#1}{\tiny{(#2)}}}
