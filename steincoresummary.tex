@@ -55,7 +55,7 @@
 \noindent Luke Stein \\
 %\footnote{Most content is copied verbatim (or only minimally rewritten) from a variety of sources; errors in the source materials are now in the good company of numerous additional errors I have presumably introduced in writing/compiling these notes.}
 Stanford graduate economics core (2006--7) \\
-Reference and review (last updated \today)
+Reference and review (last updated April 11, 2012)
 \hrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength\columnseprule{.4pt} % Set vertical rules between columns
@@ -125,11 +125,11 @@ A random variable $ X $ induces a probability measure $ P_X $ defined by $ P_X (
 \begin{center}
 \begin{tabular}{ccc}
 \hline
- & No replacement & With replacement \\ 
-Ordered & $ \frac{n!}{(n-r)!} $ & $ n^r $ \\ 
-Unordered & $ \binom{n}{r} $ & $ \binom{n+r-1}{r} $  \\ 
+ & No replacement & With replacement \\
+Ordered & $ \frac{n!}{(n-r)!} $ & $ n^r $ \\
+Unordered & $ \binom{n}{r} $ & $ \binom{n+r-1}{r} $  \\
 \hline
-\end{tabular} 
+\end{tabular}
 \end{center}
 where $ \binom{n}{r} \equiv \frac{n!}{r! (n-r)!} $. (Unordered with replacement, a.k.a.\ ``stars and bars.''\index{Stars and bars@``Stars and bars''})
 
@@ -245,7 +245,7 @@ We can also condition for/on multiple coordinates: e.g., for $ (X_1, X_2, X_3, X
 
 \litem{Stochastic ordering}{C\&B ex.~1.49, ex.~3.41-2} cdf $ F_X $ stochastically greater than cdf $ F_Y $ iff $ F_X(t) \leq F_Y(t) $ at all $ t $, with strict inequality at some $ t $. This implies $ P (X > t) \geq P (Y > t) $ at all $ t $, with strict inequality at some $ t $.
 
-A family of cdfs $ \{ F(x|\theta) \} $ is stochastically increasing in $ \theta $ iff $ \theta_1 > \theta_2 \implies F(x | \theta_1) $ stochastically greater than $ F(x | \theta_2) $. A location family is stochastically increasing in its location parameter; if a scale family has sample space $ [0, \infty) $, it is stochastically increasing in its scale parameter. 
+A family of cdfs $ \{ F(x|\theta) \} $ is stochastically increasing in $ \theta $ iff $ \theta_1 > \theta_2 \implies F(x | \theta_1) $ stochastically greater than $ F(x | \theta_2) $. A location family is stochastically increasing in its location parameter; if a scale family has sample space $ [0, \infty) $, it is stochastically increasing in its scale parameter.
 
 \litem{Support set}{C\&B eq.~2.1.7}\index{Support} Support set (a.k.a.\ support) of a r.v.\ $ X $ is $ \X \equiv \{ x \colon f_X(x) > 0 \} $, where $ f_X $ a cdf or pdf (or in general, any nonnegative function).
 
@@ -284,7 +284,7 @@ f_{XY} (h_1(u, v), h_2(u, v)) \left| J \right| , & (u,v) \in \mathcal{B}; \\
 \end{cases} $$
 where $ J $ is the Jacobian\index{Jacobian},
 $$ J \equiv \operatorname{det} \begin{bmatrix}
-\tfrac{\partial x}{\partial u} & \tfrac{\partial x}{\partial v} \\ 
+\tfrac{\partial x}{\partial u} & \tfrac{\partial x}{\partial v} \\
 \tfrac{\partial y}{\partial u} & \tfrac{\partial y}{\partial v}
 \end{bmatrix} . $$
 If the transformation is not 1-to-1, we can partition $ \mathcal{A} $ into $ \{ \mathcal{A}_i \} $ such that 1-to-1 transformations exist from each $ \mathcal{A}_i $ to $ \mathcal{B} $ which map $ (x,y) \mapsto (u,v) $ appropriately. Letting $ x = h_{1i} (u, v) $ and $ y = h_{2i} (u, v) $ be the inverses, and $ J_i $ the Jacobian, on $ \mathcal{A}_i $;
@@ -532,7 +532,7 @@ over ``natural parameter space''\index{Natural parameter space} $ \mathcal{H} \e
 The joint distribution of an iid sample from an exponential family will also be an exponential family (closure under random sampling).
 
 \litem{Location and Scale families}{C\&B 3.5.1--7, p.~121} If $ f(x) $ a pdf, $ \mu, $ $ \sigma $ constants with $ \sigma > 0 $, then $ g(x) $ also a pdf: $$ g(x) \equiv \frac{1}{\sigma} f \left( \frac{x - \mu}{\sigma} \right). $$
-$ X \sim g(x) $ iff $ \exists Z \sim f $, $ X = \sigma Z + \mu $. Assume $ X $ and $ Z $ exist; $ P (X \leq x) = P (Z \leq (x - \mu)/\sigma) $, and if $ \E Z $ and $ \Var Z  $ exist, then $ \E X = \sigma \E Z + \mu $ and $ \Var (X) = \sigma^2 \Var Z $. 
+$ X \sim g(x) $ iff $ \exists Z \sim f $, $ X = \sigma Z + \mu $. Assume $ X $ and $ Z $ exist; $ P (X \leq x) = P (Z \leq (x - \mu)/\sigma) $, and if $ \E Z $ and $ \Var Z  $ exist, then $ \E X = \sigma \E Z + \mu $ and $ \Var (X) = \sigma^2 \Var Z $.
 \begin{enumerate}
 \item Family of pdfs $ f(x - \mu) $ indexed by $ \mu $ is the ``location family'' with standard pdf $ f(x) $ and location parameter $ \mu $.
 \item Family of pdfs $ \frac{1}{\sigma} f(x / \sigma) $ indexed by $ \sigma > 0 $ is the ``scale family'' with standard pdf $ f(x) $ and scale parameter $ \sigma $. (e.g., exponential.)
@@ -609,7 +609,7 @@ If $ \{ X_i \}_{i=1}^{n} $ iid $ \n (\mu_X, \sigma_X^2 ) $ and $ \{ Y_i \}_{i=1}
  & & X_n \xrightarrow{L_s} X \ar@{=>}[d]^{s \geq r} \\
 X_n \xrightarrow{\text{as}} X \ar@{=>}[dr] & & X_n \xrightarrow{L_r} X \ar@{=>}[dl]^{r \geq 0} \\
  & X_n \xrightarrow{\text{p}} X \ar@{=>}[d] & \\
- & X_n \xrightarrow{\text{d}} X & 
+ & X_n \xrightarrow{\text{d}} X &
 }
 \end{displaymath}
 See more LLNs and CLTs in ``Time-series concepts.''
@@ -634,7 +634,7 @@ This is stronger than pointwise convergence. Uniform convergence in probability 
 $ f(n) = o(g(n)) $ iff $ \lim_{n \to \infty} f(n) / g(n) = 0 $. If $ \{ f(n) \} $ is a sequence of random variables, then $ f(n) = o_p (g(n)) $ iff $ \plim_{n \to \infty} f(n) / g(n) = 0 $.
 %Per MathWorld, $ f(x) = o(\phi) $ iff $ \lim_{x \to \infty} f(x) / \phi = 0 $.
 
-We write $ X_n - X = o_p (n^{- \gamma}) $ iff $ n^{\gamma}(X_n - X) \xrightarrow{\text{p}} 0 $. 
+We write $ X_n - X = o_p (n^{- \gamma}) $ iff $ n^{\gamma}(X_n - X) \xrightarrow{\text{p}} 0 $.
 
 \litem{Big $ O $ error notation}{D\&M 108--13; MathWorld}\index{O error notation@$ O $ error notation}\index{Landau symbols} Roughly speaking, a function is $ O(z) $ iff is of the same asymptotic order as $ z $.
 
@@ -661,7 +661,7 @@ These identities cover sums, \textit{as long as the number of terms summed is in
 \item Convergence in $ L_p $ (for $ p>0 $) implies convergence in probability and in distribution (but \textit{not} conversely).
 \item (Continuous Mapping Theorem extension)\index{Continuous Mapping Theorem} If $ X_n \xrightarrow{L_p} X $ and $ h $ is a continuous function, then $ h(X_n) \xrightarrow{L_p} h(X) $.
 \end{enumerate}
-Convergence in $ L_2 $ to a constant requires $ \lim_{n \to \infty} \E [(X_n - X)' (X_n - X)] = \lim_{n \to \infty} \operatorname{Bias}^2 + \Var^2 = 0 $. Thus it is necessary and sufficient that squared bias and squared variance go to zero. 
+Convergence in $ L_2 $ to a constant requires $ \lim_{n \to \infty} \E [(X_n - X)' (X_n - X)] = \lim_{n \to \infty} \operatorname{Bias}^2 + \Var^2 = 0 $. Thus it is necessary and sufficient that squared bias and squared variance go to zero.
 
 \litem{Almost sure convergence}{C\&B 5.5.6, 9; Hayashi 89; D\&M 106, 131; MaCurdy p.~10}\index{Convergence almost surely} $ \{ X_i \}_{i=1}^{\infty} $ converges in probability to $ X $ iff, $ \forall \epsilon > 0 $, $ P( \lim_{n \to \infty} |X_n - X| < \epsilon ) = 1 $. Written $ X_n \xrightarrow{\text{as}} X $. Also known as strong convergence, or convergence almost everywhere.
 \begin{enumerate}
@@ -702,7 +702,7 @@ Implies that if $ \epsilon_i \sim \text{niid} (0 , \sigma^2) $ (with extant $ (2
 %$$ \Var g(\mathbf{T}) \approx \sum_{i=1}^{k} [g_{i}' (\mathbf{\theta})]^2 \Var T_i + 2 \sum_{i > j} g_{i}' (\mathbf{\theta}) g_{j}' (\mathbf{\theta}) \Cov (T_i, T_j). $$
 Let $ \{ X_i \}_{i=1}^{\infty} $ be a sequence of r.v.s satisfying $ \sqrt{n} (X_n - \theta) \xrightarrow{\text{d}} \n (0, \sigma^2) $. For a given function $ g $ and specific $ \theta $, suppose $ g'(\theta) $ exists and $ g'(\theta) \neq 0 $. Then:
 $$ \sqrt{n} [g(X_n) - g(\theta )] \xrightarrow{\text{d}} \n (0, \sigma^2 [g' (\theta)]^2). $$
-If $ g'(\theta) = 0 $, but $ g''(\theta) $ exists and $ g''(\theta) \neq 0 $, we can apply the second-order Delta Method and get 
+If $ g'(\theta) = 0 $, but $ g''(\theta) $ exists and $ g''(\theta) \neq 0 $, we can apply the second-order Delta Method and get
 $ n [g(X_n) - g(\theta )] \xrightarrow{\text{d}} \tfrac{1}{2} \sigma^2 g''(\theta) \chi^2_1 $.
 
 %For multivariate Delta Method see C\&B~5.5.28.
@@ -980,11 +980,11 @@ If we choose $ W = S(\theta)^{-1} $ (the efficient choice), the asymptotic varia
 $$ \mathcal{I}(\theta) \equiv \E_\theta \biggl [ \underbrace{ \Bigl ( \tfrac{\partial}{\partial \theta} \ln f(x, \theta ) \Bigr )}_{\text{Score}}  \Bigl ( \tfrac{\partial}{\partial \theta} \ln f(x, \theta) \Bigr )' \biggr ]. $$
 Fisher information for an iid sample is $ n $ times information for each individual observation. For (univariate) normal,
 $$ \mathcal{I}(\mu, \sigma^2) =  \begin{bmatrix}
-\sigma^{-2} & 0 \\ 
+\sigma^{-2} & 0 \\
 0 & \frac{1}{2} \sigma^{-4}
 \end{bmatrix} ; \quad
 \mathcal{I}(\mu, \sigma^2)^{-1} =  \begin{bmatrix}
-\sigma^{2} & 0 \\ 
+\sigma^{2} & 0 \\
 0 & 2 \sigma^{4}
 \end{bmatrix} . $$
 
@@ -1209,7 +1209,7 @@ $ \E [g_i | g_{i-1}, g_{i-2}, \dotsc , g_{1}] = 0 $ for $ i \geq 2 $.
 
 The cumulative sum of an mds is a martingale; conversely, the first differences of a martingale are an mds. A mds has no serial correlation (i.e., $ \Cov (g_i, g_j) = 0 $ for all $ i \neq j $).
 
-\litem{Ergodic stationary martingale differences CLT}{Hayashi 106--7; Hansen B1-15--6}\index{Billingsley CLT}\index{CLT (Central Limit Theorem) for ergodic stationary mds}\index{Central Limit Theorem for ergodic stationary mds} Given a stationary ergodic mds\footnote{This is actually a corollary of Billingsley's stronger CLT (which does \textit{not require} ergodic stationarity) stated in Hansen B1-16.} $ \{ g_i \} $ with $ \E [g_i g_{i}' ] = \Sigma $, 
+\litem{Ergodic stationary martingale differences CLT}{Hayashi 106--7; Hansen B1-15--6}\index{Billingsley CLT}\index{CLT (Central Limit Theorem) for ergodic stationary mds}\index{Central Limit Theorem for ergodic stationary mds} Given a stationary ergodic mds\footnote{This is actually a corollary of Billingsley's stronger CLT (which does \textit{not require} ergodic stationarity) stated in Hansen B1-16.} $ \{ g_i \} $ with $ \E [g_i g_{i}' ] = \Sigma $,
 $$ \sqrt{n} \bar{g} \equiv \frac{1}{\sqrt{n}} \sum_{i=1}^{n} g_i \xrightarrow{\text{d}} \n (0, \Sigma). $$
 
 \litem{Lag operator}{Hayashi 369--74; Hansen B1-31--3} $ L^{j} x_{t} \equiv x_{t-j} $. Filter $ \alpha (L) \equiv \alpha_0 + \alpha_1 L + \alpha_2 L^2 + \dotsb $. Filter applied to a constant is $ \alpha (L) c = \alpha (1) c = c \sum_{j=0}^{\infty} \alpha_j $.
@@ -1386,7 +1386,7 @@ minimizes normalized distance function
 \item $ \Cov (b, e | X) = 0 $, where $ e \equiv Y - Xb $ (assumptions 1--4).
 \item $ \Var [b | X] = \sigma^2 (X'X)^{-1} $ (assumptions 1--4); therefore a common estimator is $ \widehat{\Var (b|X)} \equiv s^2 (X'X)^{-1} $. Under normal error assumption, CRLB
 $$ \mathcal{I}^{-1} =  \begin{bmatrix}
-\sigma^{2} (X'X)^{-1} & 0 \\ 
+\sigma^{2} (X'X)^{-1} & 0 \\
 0 & 2 \sigma^{4} / n
 \end{bmatrix} $$
 so $ b $ achieves CRLB and is UMVUE---this result is \textit{stronger} than Gauss-Markov, but requires normal errors.
@@ -1482,7 +1482,7 @@ $ F $ ratio is square of relevant $ t $ ratio. F is preferred to multiple $ t $ 
 \litem{OLS robust Wald statistic}{Hayashi 118, 122}\index{Robust Wald statistic} Test for $ H \colon R_{\# r \times K} \beta_{K \times 1} = r_{\# r \times 1} $, where $ \rank (R) = \# r $ (i.e., $ R $ has full row rank---there are no redundant restrictions). Under null,
 $$ W \equiv n (Rb - r)' [R \widehat{\Avar (b)} R']^{-1} (Rb - r) \xrightarrow{\text{d}} \chi^2_{\# r}.$$
 For $ H \colon a_{\# a} (\beta) = 0 $, where $ A_{\# a \times K} (\beta) \equiv \nabla a (\beta) $ is continuous and of full row rank, under null,
-$$ W \equiv n a(b)' \big [ A(b) \widehat{\Avar (b)} A(b)' \big ]^{-1} 
+$$ W \equiv n a(b)' \big [ A(b) \widehat{\Avar (b)} A(b)' \big ]^{-1}
 a(b) \xrightarrow{\text{d}} \chi^{2}_{\# a}. $$
 
 \litem{Generalized least squares}{Hayashi 54--9, 415--7; Mahajan 6-25--9; D\&M 289--92, 295}\index{GLS (Generalized Least Squares)} Without assumption~4 (spherical error variance), we have $ \E [\epsilon \epsilon' | X] \equiv \sigma^2 V $ with $ V_{n \times n} \neq \mI $ assumed to be nonsingular. Gauss-Markov no longer holds; the $ t $ and $ F $ tests are no longer valid; however, the OLS estimator \textit{is} still unbiased.
@@ -1713,7 +1713,7 @@ S = \begin{bmatrix}
 \sigma_{M1} \E [\mx_{iM} \mx_{i1}'] & \cdots & \sigma_{MM} \E [\mx_{iM} \mx_{iM}']
 \end{bmatrix}.
 $$
-\end{enumerate} 
+\end{enumerate}
 
 \litem{Linear multiple-equation GMM estimator}{Hayashi 266-7, 270--3} Hayashi 270 summarizes comparison to single-equation GMM. As in single-equation GMM case, $ \hat{\delta}_{\text{GMM}}  $ minimizes $ \frac{1}{2n^2} (Y - Z \tilde{\delta})' X \widehat{W} X' (Y - Z \tilde{\delta}) $, hence
 \begin{align*}
@@ -2045,7 +2045,7 @@ Reparametrize to get concavity.
 \begin{bmatrix} x_{t}' \beta \\ w_{t}' \gamma \end{bmatrix}
 +
 \begin{bmatrix} u_t \\ v_t  \end{bmatrix}, \quad
-\begin{bmatrix} u_t \\ v_t  \end{bmatrix} \sim \n \left( \mzero , 
+\begin{bmatrix} u_t \\ v_t  \end{bmatrix} \sim \n \left( \mzero ,
 \begin{bmatrix} \sigma^2 & \rho \sigma \\  \rho \sigma & 1 \end{bmatrix} \right),
  \]
 and $ x_t $ and $ w_t $ exogenous or predetermined. We observe $ z_t $ (the sign of $ z_t^* $) and $ y_t = y_{t}^* $ if $ z_{t}^* > 0 $.
@@ -2599,7 +2599,7 @@ e(p,\bar{u}) \ar@/_/[ll]_{\text{Shephard: } h = \nabla_p e }
 \end{enumerate}
 Construct Lagrangian $ \mathcal{L} = u(x) + \lambda (w - p \cdot x) + \sum_{i} \mu_i x_i $. If $ u $ is concave and differentiable, Kuhn-Tucker conditions (FOCs, nonnegativity, complementary slackness) are necessary and sufficient. Thus $ \partial u / \partial x_k \leq \lambda p_k $ with equality if $ x_k > 0 $. For any two goods consumed in positive quantities, $ p_j / p_k = \frac{\partial u / \partial x_j}{\partial u / \partial x_k} \equiv \operatorname{MRS}_{jk} $\index{MRS (marginal rate of substitution)}\index{Marginal rate of substitution}. The Lagrange multiplier on the budget constraint $ \lambda $ is the value in utils of an additional unit of wealth; i.e., the shadow price of wealth\index{Shadow price of wealth} or marginal utility of wealth or income\index{Marginal utility of wealth}.
 
-\litem{Indirect utility function}{Consumer 3--4} $ v(p, w) \equiv \sup_{x \in B(p,w)} u(x) $. Homogeneous of degree zero. 
+\litem{Indirect utility function}{Consumer 3--4} $ v(p, w) \equiv \sup_{x \in B(p,w)} u(x) $. Homogeneous of degree zero.
 
 \litem{Marshallian demand correspondence}{Consumer 3--4} [a.k.a.\ Walrasian or uncompensated demand]\index{Walrasian demand correspondence}\index{Uncompensated demand correspondence} $ x \colon \R^{n}_{+} \times \R_{+} \rightrightarrows \R^{n}_{+} $ with $ x(p,w) \equiv \{ x \in B(p,w) \colon u(x) = v(p,x) \} = \argmax_{x \in B(p,w)} u(x) $.
 \begin{enumerate}
@@ -2620,7 +2620,7 @@ Construct Lagrangian $ \mathcal{L} = u(x) + \lambda (w - p \cdot x) + \sum_{i} \
 
 If $ p \gg 0 $, $ u (\cdot) $ is continuous, and $ \exists \hat{x} $ such that $ u(\hat{x}) \geq \bar{u} $, then EMP has a solution.
 
-\litem{Expenditure function}{Consumer 9} $ e(p, \bar{u}) \equiv \min_{x \in \R^{n}_{+}} p \cdot x $ such that $ u(x) \geq \bar{u} $. 
+\litem{Expenditure function}{Consumer 9} $ e(p, \bar{u}) \equiv \min_{x \in \R^{n}_{+}} p \cdot x $ such that $ u(x) \geq \bar{u} $.
 
 \litem{Hicksian demand correspondence}{Consumer 9} [a.k.a.\ compensated demand]\index{Compensated demand correspondence} $ h \colon \R^{n}_{+} \times \R_{+} \rightrightarrows \R^{n}_{+} $ with $ h(p,\bar{u}) \equiv \{ x \in \R^{n}_{+} \colon u(x) \geq \bar{u} \} = \argmin_{x \in \R^{n}_{+}} p \cdot x $ such that $ u(x) \geq \bar{u} $.
 
@@ -2644,7 +2644,7 @@ If $ p \gg 0 $, $ u (\cdot) $ is continuous, and $ \exists \hat{x} $ such that $
 \item Hicksian demand is increasing in $ \bar{u} $; and
 \item The Slutsky matrix\index{Slutsky matrix}
 $$ D_p h(p, \bar{u}) = \begin{bmatrix}
-\tfrac{\partial h_1 (p, \bar{u})}{\partial p_1} & \cdots & \tfrac{\partial h_n (p, \bar{u})}{\partial p_1} \\ 
+\tfrac{\partial h_1 (p, \bar{u})}{\partial p_1} & \cdots & \tfrac{\partial h_n (p, \bar{u})}{\partial p_1} \\
 \vdots & \ddots & \vdots \\
 \tfrac{\partial h_1 (p, \bar{u})}{\partial p_n} & \cdots & \tfrac{\partial h_n (p, \bar{u})}{\partial p_n}
 \end{bmatrix} $$
@@ -2992,13 +2992,13 @@ We \textit{cannot} iteratively delete weakly dominated strategies; unlike for st
 $ \text{PSNE} \subseteq \text{rationalizable} \subseteq \text{ISD} $.
 Rationalizable strategies are a best response based on \textit{some} prior. PSNE are best responses based on a \textit{common} prior.
 
-Normal form equilibrium concepts (static games): 
+Normal form equilibrium concepts (static games):
 $ \text{THPE} \subseteq \text{MSNE} $; $ \text{PSNE} \subseteq \text{MSNE} $;
 MSNE are made up of rationalizable strategies. BNE are MSNE of ``extended game'' that includes nature choosing types.
 
 Extensive form equilibrium concepts (dynamic games)\footnote{Unclear whether PBE is the intersection of WPBE and SPNE, or a \textit{subset} of the intersection.}:
 %$ \text{WPBE} \nsubseteq \text{SPNE} $ and $ \text{SPNE} \nsubseteq \text{WPBE} $.
-\begin{center} \includegraphics[width=.6\linewidth]{equil} \end{center}
+\begin{center} \includegraphics[width=.6\linewidth]{images/equil} \end{center}
 
 \litem{Rationalizable strategy}{Bernheim 27}
 \begin{enumerate}
@@ -3359,18 +3359,18 @@ Steady state satisfies $ \beta f' (k^*) = 1 $. Note the utility function does \t
 Linearization of the intereuler
 \[ u'(f(k_t) - k_{t+1}) - \beta f' (k_{t+1}) u' (f(k_{t+1}) - k_{t+2}) = 0 \]
 about steady state gives:
-$$ 
+$$
 \begin{bmatrix}
-k_{t+2} - k_* \\ 
+k_{t+2} - k_* \\
 k_{t+1} - k_*
 \end{bmatrix}
 \approx
 \begin{bmatrix}
-1 + \frac{1}{\beta} + \beta \frac{U'(c_*)}{U''(c_*)} f''(k_*) & -\frac{1}{\beta} \\ 
+1 + \frac{1}{\beta} + \beta \frac{U'(c_*)}{U''(c_*)} f''(k_*) & -\frac{1}{\beta} \\
 1 & 0
 \end{bmatrix}
 \begin{bmatrix}
-k_{t+1} - k_* \\ 
+k_{t+1} - k_* \\
 k_{t} - k_*
 \end{bmatrix}
  $$
@@ -3609,7 +3609,7 @@ converges iff $ \operatorname{real}(a) < 0 $.
 
 In $ \R^n $, the system $ \dot{x}_t = Ax_t \equiv \dot{\tilde{x}}_t = \Lambda \tilde{x}_t $ where $ \tilde{x}_t = P^{-1} x_t $ and the eigen decomposition is $ A = P \Lambda P^{-1} $. Therefore
 $$ \tilde{x}_t = e^{\Lambda t} \tilde{x}_0 = \begin{bmatrix}
-e^{\lambda_1 t} & & \\ 
+e^{\lambda_1 t} & & \\
 & \ddots & \\
 & & e^{\lambda_n t}
 \end{bmatrix} \tilde{x}_0. $$
@@ -3817,7 +3817,7 @@ $$ \pi = \hat{\pi} + \varphi_{\text{lr}} y = \hat{\pi} - 2.5 \varphi_{\text{lr}}
 \item Inconsistent (cheating): Promise optimal, but then name consistent.
 \end{enumerate}
 
-\litem{Lucas supply function}{Taylor} $ y_t = \phi (\pi_t - \hat{\pi}_t) + \epsilon_t  $. Can be seen directly from Expectations-augmented Philips curve. 
+\litem{Lucas supply function}{Taylor} $ y_t = \phi (\pi_t - \hat{\pi}_t) + \epsilon_t  $. Can be seen directly from Expectations-augmented Philips curve.
 
 \hrule
 \section{Mathematics}
@@ -3918,7 +3918,7 @@ One direction proved by differentiating $ f(\lambda p) = \lambda^k f(p) $ with r
 \item $ \Gamma (n) = (n-1)! $ for integer $ n >0 $.
 \item $ \Gamma (\tfrac{1}{2}) = \sqrt{\pi} $.
 \end{enumerate}
-\begin{center} \includegraphics[width=.5\linewidth]{gamma} \end{center}
+\begin{center} \includegraphics[width=.5\linewidth]{images/gamma} \end{center}
 
 \litem{Beta function}{C\&B eq.~3.3.17}\index{B(.) (Beta function)@$ B ( \cdot ) $ (Beta function)} $ B (\alpha, \beta) \equiv \Gamma (\alpha) \cdot \Gamma (\beta) / \Gamma (\alpha + \beta) $.
 
@@ -4016,18 +4016,18 @@ $.
 \item If $ \mA^{-1} $ exists, then $ (\mA^{-1})' = (\mA')^{-1} $.
 \item The inverse of a $ 2 \times 2 $ matrix is
 $$ \begin{bmatrix}
-a & b \\ 
+a & b \\
 c & d
 \end{bmatrix}^{-1} =
 \frac{1}{| \mA |}
 \begin{bmatrix}
-d & -b \\ 
+d & -b \\
 -c & a
 \end{bmatrix}
 =
 \frac{1}{ad - bc}
 \begin{bmatrix}
-d & -b \\ 
+d & -b \\
 -c & a
 \end{bmatrix} . $$
 \item For diagonal $ \mA $, the inverse is diagonal with elements $ a_{ii}^{-1} $.
@@ -4107,7 +4107,7 @@ A $ 2 \times 2 $ matrix $ \mA $ has two explosive eigenvalues (outside the unit 
 \item $ \mA > \mzero \implies \mA^{-1} > \mzero $ (i.e., the inverse of a positive definite matrix is positive definite).
 \item $ \forall \mB_{n \times k} $ ``tall'' (i.e., $ n \geq k $), $ \mA_{n \times n} \geq \mzero \implies \mB' \mA \mB \geq \mzero $. If $ \mB $ is full rank (i.e., $ \rank(\mB) = k $), then $ \mA_{n \times n} > \mzero \implies \mB' \mA \mB > \mzero $.
 \item For $ \mA_{n \times n} $ and $ \mB_{n \times n} $ both positive definite, $ \mA \geq \mB \iff \mB^{-1} \geq \mA^{-1} $, and $ \mA > \mB \iff \mB^{-1} > \mA^{-1} $.
-\item $ \mA \geq \mzero \implies \lvert \mA \rvert \geq 0 $ and $ \mA > \mzero \implies \lvert \mA \rvert > 0 $---note the natural analogues for negative (semi)definite matrices do \textit{not} hold. 
+\item $ \mA \geq \mzero \implies \lvert \mA \rvert \geq 0 $ and $ \mA > \mzero \implies \lvert \mA \rvert > 0 $---note the natural analogues for negative (semi)definite matrices do \textit{not} hold.
 \end{enumerate}
 
 \litem{Orthogonal completion}{Hansen 5-24} For a ``wide'' matrix $ \mA_{n \times k} $ (i.e., $ n < k $) with full row rank (i.e., all rows are linearly independent), we can construct a (non-unique) $ (k - n) \times k $ matrix $ \mA_\perp $ such that:
@@ -4145,7 +4145,7 @@ For a ``tall'' matrix $ \mB_{n \times k} $ (i.e., $ n > k $) with full column ra
 \litem{Partitioned matrices}{Hayashi 670--673; Greene 32--3}
 \begin{align*}
 \left \lvert \begin{bmatrix}
-\mA_{11} & \mA_{12}  \\ 
+\mA_{11} & \mA_{12}  \\
 \mA_{21} & \mA_{22}
 \end{bmatrix} \right \rvert
 &= \lvert \mA_{22} \rvert \cdot  \lvert \mA_{11} - \mA_{12} \mA_{22}^{-1} \mA_{21} \rvert  \\
@@ -4154,36 +4154,36 @@ For a ``tall'' matrix $ \mB_{n \times k} $ (i.e., $ n > k $) with full column ra
 %
 %Hayashi A.3
 $$ \begin{bmatrix}
-\mA_{11} & \cdots & \mA_{1N} \\ 
+\mA_{11} & \cdots & \mA_{1N} \\
 \vdots & \ddots & \vdots \\
 \mA_{M1} & \cdots & \mA_{MN}
 \end{bmatrix}
 \begin{bmatrix}
-\mc_{1}  \\ 
+\mc_{1}  \\
 \vdots  \\
 \mc_{N}
 \end{bmatrix}
 =
 \begin{bmatrix}
-\sum_i \mA_{1i} \mc_{i}  \\ 
+\sum_i \mA_{1i} \mc_{i}  \\
 \vdots  \\
 \sum_i \mA_{Mi} \mc_{i}
 \end{bmatrix}; $$
 %
 %Hayashi A.4
 $$ \begin{bmatrix}
-\mA_{11} &  &  \\ 
+\mA_{11} &  &  \\
  & \ddots &  \\
  &  & \mA_{MM}
 \end{bmatrix}
 \begin{bmatrix}
-\mc_{1}  \\ 
+\mc_{1}  \\
 \vdots  \\
 \mc_{N}
 \end{bmatrix}
 =
 \begin{bmatrix}
-\mA_{11} \mc_{1}  \\ 
+\mA_{11} \mc_{1}  \\
 \vdots  \\
 \mA_{MM} \mc_{M}
 \end{bmatrix}; $$
@@ -4191,7 +4191,7 @@ $$ \begin{bmatrix}
 %Hayashi A.5
 $$ \mA_\text{diag} \mB_\text{diag} =
 \begin{bmatrix}
-\mA_{11} \mB_{11} &  &  \\ 
+\mA_{11} \mB_{11} &  &  \\
  & \ddots &  \\
  &  & \mA_{MM} \mB_{MM}
 \end{bmatrix};
@@ -4202,9 +4202,9 @@ $$
 \mA_{\text{diag}}' \mB \mA_{\text{diag}}
 \\ =
 \begin{bmatrix}
-\mA_{11}' \mB_{11} \mA_{11} & \cdots & \mA_{11}' \mB_{1M} \mA_{MM} \\ 
+\mA_{11}' \mB_{11} \mA_{11} & \cdots & \mA_{11}' \mB_{1M} \mA_{MM} \\
 \vdots & \ddots & \vdots \\
-\mA_{MM}' \mB_{M1} \mA_{11} & \cdots & \mA_{MM}' \mB_{MM} \mA_{MM} 
+\mA_{MM}' \mB_{M1} \mA_{11} & \cdots & \mA_{MM}' \mB_{MM} \mA_{MM}
 \end{bmatrix};
 \end{multline*}
 %
@@ -4213,7 +4213,7 @@ $$
 \mA_{\text{diag}}' \mB \mc
 \\ =
 \begin{bmatrix}
-\mA_{11}' \mB_{11} \mc_{1} + \dotsc + \mA_{11}' \mB_{1M} \mc_{M} \\ 
+\mA_{11}' \mB_{11} \mc_{1} + \dotsc + \mA_{11}' \mB_{1M} \mc_{M} \\
 \vdots \\
 \mA_{MM}' \mB_{M1} \mc_{1} + \dotsc + \mA_{MM}' \mB_{MM} \mc_{M}
 \end{bmatrix};
@@ -4221,7 +4221,7 @@ $$
 %
 %Hayashi A.9
 $$ \mA_{\text{diag}}^{-1} = \begin{bmatrix}
-\mA_{11}^{-1} &  &  \\ 
+\mA_{11}^{-1} &  &  \\
  & \ddots &  \\
  &  & \mA_{MM}^{-1}
 \end{bmatrix}. $$
@@ -4230,12 +4230,12 @@ The inverse of a $ 2 \times 2 $ partitioned matrix is:
 %Hayashi A.10
 \begin{multline*}
 \begin{bmatrix}
-\mA_{11} & \mA_{12}  \\ 
+\mA_{11} & \mA_{12}  \\
 \mA_{21} & \mA_{22}
 \end{bmatrix}^{-1}
 \\ =
 \begin{bmatrix}
-\mA_{11}^{-1} + \mA_{11}^{-1} \mA_{12} \mathbf{F}_2 \mA_{21} \mA_{11}^{-1} & -\mA_{11}^{-1} \mA_{12} \mathbf{F}_2  \\ 
+\mA_{11}^{-1} + \mA_{11}^{-1} \mA_{12} \mathbf{F}_2 \mA_{21} \mA_{11}^{-1} & -\mA_{11}^{-1} \mA_{12} \mathbf{F}_2  \\
 - \mathbf{F}_2 \mA_{21} \mA_{11}^{-1} & \mathbf{F}_2
 \end{bmatrix},
 \end{multline*}
@@ -4243,7 +4243,7 @@ where $ \mathbf{F}_2 \equiv (\mA_{22} - \mA_{21} \mA_{11}^{-1} \mA_{12})^{-1} $.
 
 \litem{Kronecker product}{Hayashi 673; Greene 34--5} For $ \mA_{M \times N} $ and $ \mB_{K \times L} $,
 $$ \mA \otimes \mB = \begin{bmatrix}
-a_{11} \mB & \cdots & a_{1N} \mB \\ 
+a_{11} \mB & \cdots & a_{1N} \mB \\
 \vdots & \ddots & \vdots \\
 a_{M1} \mB & \cdots & a_{MN} \mB
 \end{bmatrix} $$
@@ -4299,12 +4299,12 @@ Woodford \> Woodford: Interest and Prices
 %\section{Statistical tables}
 \addcontentsline{toc}{section}{Statistical tables}
 \begin{center}
-\includegraphics[height=9.75in, angle=90]{cv1}
-\includegraphics[height=9.75in, angle=90]{cv2}
-\includegraphics[height=9.75in, angle=90]{cv3}
-\includegraphics[height=9.75in, angle=90]{cv4}
-\includegraphics[height=9.75in, angle=90]{cv5}
-\includegraphics[height=9.75in, angle=90]{cv6}
-\includegraphics[height=9.75in, angle=90]{cv7}
+\includegraphics[height=9.75in, angle=90]{images/cv1}
+\includegraphics[height=9.75in, angle=90]{images/cv2}
+\includegraphics[height=9.75in, angle=90]{images/cv3}
+\includegraphics[height=9.75in, angle=90]{images/cv4}
+\includegraphics[height=9.75in, angle=90]{images/cv5}
+\includegraphics[height=9.75in, angle=90]{images/cv6}
+\includegraphics[height=9.75in, angle=90]{images/cv7}
 \end{center}
 \end{document}
